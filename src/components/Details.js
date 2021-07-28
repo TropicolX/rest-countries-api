@@ -3,7 +3,7 @@ import axios from "../axios";
 import { Link, useParams } from "react-router-dom";
 import { ArrowNarrowLeftIcon } from "@heroicons/react/outline";
 
-const Details = () => {
+const Details = ({ resetData }) => {
 	const [data, setData] = useState([]);
 	const [borders, setBorders] = useState([]);
 	const { country } = useParams();
@@ -45,15 +45,17 @@ const Details = () => {
 	const borderElements =
 		borders.length > 0
 			? borders.map((border) => (
-					<div key={border} className="border">
-						<span>{border}</span>
-					</div>
+					<Link key={border} to={`/${border.toLowerCase()}`}>
+						<div className="border">
+							<span>{border}</span>
+						</div>
+					</Link>
 			  ))
 			: "N/A";
 
 	return (
 		<div className="details">
-			<Link to="/" className="back-button">
+			<Link to="/" className="back-button" onClick={resetData}>
 				<ArrowNarrowLeftIcon className="icon" />
 				Back
 			</Link>

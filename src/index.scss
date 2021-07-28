@@ -385,9 +385,9 @@ main {
 	}
 }
 
-@media (width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1036px) {
 	.cards {
-		grid-template-columns: repeat(2, 1fr) !important;
+		grid-template-columns: repeat(3, 1fr) !important;
 	}
 }
 
@@ -431,6 +431,42 @@ main {
 		.card {
 			img {
 				height: 45%;
+			}
+		}
+	}
+
+	.details {
+		&-content {
+			display: grid;
+			grid-template-columns: 40% 60%;
+			gap: 4rem;
+
+			.country-details {
+				padding-top: 0rem;
+
+				.row > .column {
+					padding-top: 0rem;
+				}
+				.row {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+
+					.column {
+						padding-top: 2rem;
+					}
+				}
+
+				.borders {
+					display: flex;
+					align-items: center;
+
+					p {
+						width: 68%;
+					}
+					&-container {
+						padding-left: 1rem;
+					}
+				}
 			}
 		}
 	}

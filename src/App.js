@@ -96,7 +96,7 @@ function App() {
 							</Route>
 
 							<Route path="/:country">
-								<Details />
+								<Details resetData={resetData} />
 							</Route>
 						</Switch>
 					</main>
