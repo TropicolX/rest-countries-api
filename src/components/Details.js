@@ -31,6 +31,7 @@ const Details = ({ resetData }) => {
 			}
 		};
 		getName(country);
+		window.scrollTo(0, 0);
 	}, [country]);
 
 	console.log(data);
