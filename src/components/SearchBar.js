@@ -24,7 +24,6 @@ const SearchBar = ({ getSearch, pageBack }) => {
 				<input
 					type="text"
 					ref={inputRef}
-					arialabel="Search"
 					onChange={handleSearch}
 					placeholder="Search for a country..."
 				/>
