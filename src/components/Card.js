@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 
 const Card = ({ name, image, population, region, capital }) => {
+	const encodedURI = encodeURI(name.toLowerCase());
+
 	return (
 		<div className="card">
-			<Link to={`/${name.toLowerCase()}`}>
+			<Link to={`/${encodedURI}`}>
 				<img src={image} alt="" />
 				<div className="card-content">
 					<h1>{name}</h1>
